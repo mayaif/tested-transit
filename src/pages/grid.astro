@@ -1,0 +1,72 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 8px;
+      }
+
+      .grid-item {
+        border: 1px solid black;
+        padding: 0;
+      }
+
+      .grid-item input,
+      .grid-item select {
+        width: 100%;
+        box-sizing: border-box;
+        height: 50px;
+      }
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Information Form</h2>
+
+    <form>
+      <div class="grid-container">
+        <div class="grid-item">Title</div>
+        <div class="grid-item"><input type="text" name="title" /></div>
+        <div class="grid-item">First Name</div>
+        <div class="grid-item"><input type="text" name="firstName" /></div>
+
+        <div class="grid-item">Surname</div>
+        <div class="grid-item"><input type="text" name="surname" /></div>
+        <div class="grid-item">Gender</div>
+        <div class="grid-item">
+          <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="grid-item" style="grid-row: span 2;">Address</div>
+        <div class="grid-item" style="grid-row: span 2;">
+          <input type="text" name="address" />
+        </div>
+        <div class="grid-item">Date of Birth</div>
+        <div class="grid-item"><input type="date" name="dob" /></div>
+
+        <div class="grid-item">Contact Number</div>
+        <div class="grid-item"><input type="text" name="contactNumber" /></div>
+        <div class="grid-item">Postcode</div>
+        <div class="grid-item"><input type="text" name="postcode" /></div>
+
+        <div class="grid-item">Email Address</div>
+        <div class="grid-item"><input type="email" name="email" /></div>
+      </div>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
