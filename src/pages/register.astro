@@ -1,0 +1,78 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 0px;
+        text-align: left;
+      }
+
+      input,
+      select {
+        width: 100%;
+        box-sizing: border-box;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Information Form</h2>
+
+    <form>
+      <table>
+        <!-- <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr> -->
+        <tr>
+          <td>Title</td>
+          <td><input type="text" name="title" /></td>
+          <td>First Name</td>
+          <td><input type="text" name="firstName" /></td>
+        </tr>
+        <tr>
+          <td>Surname</td>
+          <td><input type="text" name="surname" /></td>
+          <td>Gender</td>
+          <td
+            ><select name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select></td
+          >
+        </tr>
+        <tr>
+          <td rowspan="2">Address</td>
+          <td rowspan="2"><input type="text" name="address" /></td>
+          <td>Date of Birth</td>
+          <td><input type="date" name="dob" /></td>
+        </tr>
+        <tr>
+          <td>Contact Number</td>
+          <td><input type="text" name="contactNumber" /></td>
+        </tr>
+        <tr>
+          <td>Postcode</td>
+          <td><input type="text" name="postcode" /></td>
+          <td>Email Address</td>
+          <td><input type="email" name="email" /></td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

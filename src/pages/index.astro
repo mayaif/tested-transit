@@ -1,0 +1,96 @@
+---
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+
+    <h2>Information Form</h2>
+
+    <form>
+      <table>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="address-rowspan">Title</td>
+          <td><input type="text" name="title" /></td>
+          <td>First Name</td>
+          <td><input type="text" name="firstName" /></td>
+        </tr>
+        <tr>
+          <td>Surname</td>
+          <td><input type="text" name="surname" /></td>
+          <td>Gender</td>
+          <td
+            ><select name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select></td
+          >
+        </tr>
+        <tr>
+          <td rowspan="2" class="address-rowspan">Address</td>
+          <td><input type="text" name="address" /></td>
+          <td>Date of Birth</td>
+          <td><input type="date" name="dob" /></td>
+          <td>Contact Number</td>
+          <td><input type="text" name="contactNumber" /></td>
+        </tr>
+        <tr>
+          <td>Postcode</td>
+          <td><input type="text" name="postcode" /></td>
+          <!-- <td>Contact Number</td>
+          <td><input type="text" name="contactNumber" /></td> -->
+          <td>Email Address</td>
+          <td><input type="email" name="email" /></td>
+        </tr>
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td>Email Address</td>
+          <td><input type="email" name="email" /></td>
+        </tr> -->
+      </table>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    input,
+    select {
+      width: 100%;
+      height: 100%; /* Make input fields same height as table cells */
+      box-sizing: border-box;
+    }
+
+    /* Address field to span two rows */
+    .address-rowspan {
+      vertical-align: top;
+    }
+  </style>
+</html>
